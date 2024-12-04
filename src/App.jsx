@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  // State holatlari
   const [shape, setShape] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -15,7 +14,6 @@ export default function App() {
   const [tasks, setTasks] = useState([]);
   const [task, setTask] = useState("");
 
-  // Funksiyalar
   const handleShape = (e) => {
     const value = parseInt(e.target.value);
     if (value === 3) setShape("Uchburchak");
@@ -58,7 +56,6 @@ export default function App() {
   return (
     <div className="container">
       <div className="form-section">
-        {/* 1. Shaklni aniqlash */}
         <div>
           <h3>Shaklni aniqlash</h3>
           <input
@@ -69,7 +66,6 @@ export default function App() {
           <p>{shape}</p>
         </div>
 
-        {/* 2. Parol tekshirish */}
         <div>
           <h3>Parol tekshirish</h3>
           <input
@@ -93,7 +89,6 @@ export default function App() {
           </p>
         </div>
 
-        {/* 3. Checkbox ro'yxat */}
         <div>
           <h3>Checkbox bilan ro'yxat</h3>
           {["Olma", "Banan", "Apelsin"].map((fruit) => (
@@ -109,7 +104,6 @@ export default function App() {
           <p>Tanlangan: {selectedFruits.join(", ")}</p>
         </div>
 
-        {/* 4. Rangni o'zgartirish */}
         <div>
           <h3>Rangni o'zgartirish</h3>
           {[
@@ -133,7 +127,6 @@ export default function App() {
           ></div>
         </div>
 
-        {/* 5. Email tekshirish */}
         <div>
           <h3>Email tekshirish</h3>
           <input
@@ -151,7 +144,6 @@ export default function App() {
           </p>
         </div>
 
-        {/* 6. Qiymatlarni almashtirish */}
         <div>
           <h3>Qiymatlarni almashtirish</h3>
           <input
@@ -169,7 +161,6 @@ export default function App() {
           <button onClick={swapInputs}>Qiymatlarni almashtirish</button>
         </div>
 
-        {/* 7. To-do ro'yxat */}
         <div>
           <h3>To-do ro'yxat</h3>
           <input
